@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\FREE-FALL_detector.dir/objects.a
+C:\PROGRA~1\MinGW\bin\ar.exe qc CMakeFiles\FREE-FALL_detector.dir/objects.a @CMakeFiles\FREE-FALL_detector.dir\objects1.rsp
+C:\PROGRA~1\MinGW\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\FREE-FALL_detector.dir/objects.a -Wl,--no-whole-archive -o FREE-FALL_detector.exe -Wl,--out-implib,libFREE-FALL_detector.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\FREE-FALL_detector.dir\linkLibs.rsp

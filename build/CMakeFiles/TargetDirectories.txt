@@ -1,0 +1,5 @@
+C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build/CMakeFiles/FREE-FALL_detector.dir
+C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build/CMakeFiles/package.dir
+C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build/CMakeFiles/package_source.dir
+C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build/CMakeFiles/edit_cache.dir
+C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build/CMakeFiles/rebuild_cache.dir
