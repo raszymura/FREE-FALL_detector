@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj"
+  "CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj.d"
+  "CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj"
+  "CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj.d"
+  "CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj"
+  "CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj.d"
   "CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.obj"
   "CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.obj.d"
   "FREE-FALL_detector.exe"

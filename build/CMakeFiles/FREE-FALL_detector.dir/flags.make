@@ -4,7 +4,7 @@
 # compile CXX with C:/Program Files/MinGW/bin/g++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = @CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp
 
 CXX_FLAGS = -g
 

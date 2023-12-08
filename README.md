@@ -16,16 +16,16 @@ GCC
 Cmake
 
 ## Clone the repository
-git clone https://github.com/raszymura/FREE-FALL_detector
+`git clone https://github.com/raszymura/FREE-FALL_detector`
 
 ## Navigate to the project directory
-cd FREE-FALL_detector
-cd build
+`cd FREE-FALL_detector`
+`cd build`
 
 ## Compile the code
-make
+`make`
 
 ## Run program
-cd FREE-FALL_detector
-cd build
-.\FREE-FALL_detector
+`cd FREE-FALL_detector`
+`cd build`
+`.\FREE-FALL_detector`
