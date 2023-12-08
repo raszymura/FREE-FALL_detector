@@ -5,39 +5,74 @@
  */
 
 #include <iostream>
+#include <iomanip> // For std::setprecision
+
 #include "IMU.h"
 #include "SocketServer.h"
+#include "FFdetector.h"
 
-int main()
-{
-    std::cout << "\n************** Welcome to FF detector! **************\n";
 
-    std::cout << "Server on port: 1234" << '\n';
+int main() {
+    std::cout << "\n************** Welcome to FREE-FALL detector! **************\n";
+    
+    FFdetector detector;
+    detector.setThresholds();
+    
+    std::cout << "Open IMU_simulator.exe and upload the simulation values.\nWaiting for connection...\n";
+
     SocketServer server("12345");
+    std::cout << "Port: 1234" << '\n';
 
     server.startListening();
 
-    std::cout << "Receiving IMU Data..." << std::endl;
+    IMURegisters imuRegisters = server.getReceivedRegisters();
 
-    //bool endData;  // Flag for end control
-    //IMUData receivedData = server.getReceivedData();
-while(1){
-    server.startListening();
-    IMUData imuData = server.getReceivedData();
-    std::cout << "Accelerometer: (" << imuData.ax << ", " << imuData.ay << ", " << imuData.az << ")\n";
-    std::cout << "Gyroscope:     (" << imuData.gx << ", " << imuData.gy << ", " << imuData.gz << ")\n";
+    std::cout << "-------------------------Received values:---------------------------------------\n";
+    std::cout << "Sampling rate:                   " << imuRegisters.samplingRate        << " Hz"   << "\n";
+    std::cout << "Accelerometer measurement range: " << imuRegisters.accelerometerRange  << " g"    << "\n";
+    std::cout << "Gyroscope measurement range:     " << imuRegisters.gyroscopeRange      << " dps"  << "\n";
     std::cout << "---------------------------------------------------------------------------------\n";
 
-    //if (receivedData.samplingRate == -1) {
-    // IMURegisters receivedData = server.getReceivedData();
+    detector.setPeriod(imuRegisters);
 
-    //  endData = true;
-    //  std::cout << "Sampling Rate: "          << receivedData.samplingRate        << " Hz" << std::endl;
-    //  std::cout << "Accelerometer Range: "    << receivedData.accelerometerRange  << " g"  << std::endl;
-    //  std::cout << "Gyroscope Range: "        << receivedData.gyroscopeRange      << " dps" << std::endl;
-}
-//}
-    std::cout << "Done"  << std::endl;
+    std::cout << std::fixed << std::setprecision(15);
+
+    int dataCount = 0;
+    while (1) {
+        server.startListening();
+
+        if (server.endData == 1) {
+            break;
+        }
+
+        IMUData imuData = server.getReceivedData();
+
+        detector.processReceivedData(imuData); // FF detector
+
+        // std::cout << "Accelerometer: (" << imuData.ax << ", " << imuData.ay << ", " << imuData.az << ")\n";
+        // std::cout << "Gyroscope:     (" << imuData.gx << ", " << imuData.gy << ", " << imuData.gz << ")\n";
+        // std::cout << "---------------------------------------------------------------------------------\n";
+        dataCount++;
+    }
+    std::cout << "Number of received values: " << dataCount << "\n"
+    << std::setprecision(2) << dataCount * (1.0 / imuRegisters.samplingRate) << "s\n";
+/*
+    int showFFvalues;
+    std::cout << "Do you want to display detected FF values? Type 1\n";
+    std::cin >> showFFvalues;
+
+    
+    if (showFFvalues == 1) {
+        while ( ) {
+            std::cout << "Accelerometer: (" << imuData.ax << ", " << imuData.ay << ", " << imuData.az << ")\n";
+            //std::cout << "Gyroscope:     (" << imuData.gx << ", " << imuData.gy << ", " << imuData.gz << ")\n";
+            std::cout << "---------------------------------------------------------------------------------\n";
+        }
+    }
+*/
+    std::cout << "Results"  << std::endl;
+    double ffDuration = detector.getFreeFallDuration();
+
 
     return 0;
 }
