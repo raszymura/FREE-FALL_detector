@@ -1,7 +1,11 @@
 #pragma once
 
-#include "IMU.h"
 #include <iostream>
+#include <vector>
+#include <iomanip>
+
+#include "IMU.h"
+
 
 class FFdetector {
 private:
@@ -15,7 +19,14 @@ private:
     double threshold_minus;
     double samplingPeriod;
 
-    bool isInRange(double value, double threshold_minus, double threshold_plus);
+    bool isInRange(const double& value, const double& threshold_minus, const double& threshold_plus);
+
+    struct DetectedFF {
+        IMUData imuData;
+        double fallDuration;
+    };
+    std::vector<DetectedFF> detectedFreeFalls;
+
 public:
     FFdetector();
 
@@ -24,6 +35,7 @@ public:
     void processReceivedData(const IMUData& imuData);
     bool isFreeFallDetected(bool inRange);
     double getFreeFallDuration() const;
+    void printFreeFall() const;
 };
 
 /*

@@ -64,14 +64,16 @@ void FFdetector::processReceivedData(const IMUData& imuData) {
     bool inRange = isInRange(imuData.ax, threshold_minus, threshold_plus) &&
                     isInRange(imuData.ay, threshold_minus, threshold_plus) &&
                     isInRange(imuData.az, threshold_minus, threshold_plus);
-    //std::cout << inRange;
+    //std::cout << inRange; // For debugging purposes
 
     // Minimum duration in trigger range, when reached start measuring the duration of the free fall (trigger time is added)
     interrupt = isFreeFallDetected(inRange);
 
     if (interrupt) {
-        std::cout << "Free-Fall for: (" << imuData.ax << ", " << imuData.ay << ", " << imuData.az << ") for: " << duration << "s\n";
-        std::cout << "---------------------------------------------------------------------------------\n";
+        DetectedFF freeFall;
+        freeFall.imuData = imuData;
+        freeFall.fallDuration = duration;
+        detectedFreeFalls.push_back(freeFall);
     } //else {}
 }
 
@@ -91,10 +93,18 @@ bool FFdetector::isFreeFallDetected(bool inRange) {
     return interrupt;
 }
 
-bool FFdetector::isInRange(double value, double threshold_minus, double threshold_plus) {
+bool FFdetector::isInRange(const double& value, const double& threshold_minus, const double& threshold_plus) {
     return  ( (value >= threshold_minus) && (value <= threshold_plus) );
 }
 
 double FFdetector::getFreeFallDuration() const {
     return duration;
+}
+
+void FFdetector::printFreeFall() const {
+    for (int i = 0; i < detectedFreeFalls.size(); i++) {
+        const auto& freeFall = detectedFreeFalls[i];
+        std::cout << "Detected Fall: (" << std::setprecision(15) << freeFall.imuData.ax << ", " << freeFall.imuData.ay << ", " << freeFall.imuData.az
+                << ") for: " << std::setprecision(2) << freeFall.fallDuration << "s\n";
+    }
 }

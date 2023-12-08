@@ -5,7 +5,7 @@
  */
 
 #include <iostream>
-#include <iomanip> // For std::setprecision
+#include <iomanip>
 
 #include "IMU.h"
 #include "SocketServer.h"
@@ -54,25 +54,18 @@ int main() {
         // std::cout << "---------------------------------------------------------------------------------\n";
         dataCount++;
     }
-    std::cout << "Number of received values: " << dataCount << "\n"
+    std::cout << "Number of received values: " << dataCount << " in "
     << std::setprecision(2) << dataCount * (1.0 / imuRegisters.samplingRate) << "s\n";
-/*
+
     int showFFvalues;
     std::cout << "Do you want to display detected FF values? Type 1\n";
     std::cin >> showFFvalues;
 
-    
     if (showFFvalues == 1) {
-        while ( ) {
-            std::cout << "Accelerometer: (" << imuData.ax << ", " << imuData.ay << ", " << imuData.az << ")\n";
-            //std::cout << "Gyroscope:     (" << imuData.gx << ", " << imuData.gy << ", " << imuData.gz << ")\n";
-            std::cout << "---------------------------------------------------------------------------------\n";
-        }
+        detector.printFreeFall();
     }
-*/
     std::cout << "Results"  << std::endl;
     double ffDuration = detector.getFreeFallDuration();
-
 
     return 0;
 }

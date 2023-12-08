@@ -15,8 +15,10 @@ private:
 public:
     SocketServer(const std::string& serverPort);
     ~SocketServer();
-    
+
     void startListening();
     IMUData getReceivedData() const;
     IMURegisters getReceivedRegisters() const;
+
+    bool endData;  // Flag for end control
 };

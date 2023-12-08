@@ -14,23 +14,31 @@ SocketServer::~SocketServer() {
 }
 
 void SocketServer::startListening() {
-    /*try {
-        std::cout << "Listening..";
-        acceptor.accept(socket);
-        asio::streambuf receiveBuffer;
-        asio::read(socket, receiveBuffer);
-      
-        std::istream inputStream(&receiveBuffer);
-        inputStream.read(reinterpret_cast<char*>(&receivedData), sizeof(IMUData));
+    try {
+        // Deserialization
+        //std::istream inputStream(&receiveBuffer);
+        //inputStream.read(reinterpret_cast<char*>(&receivedData), sizeof(IMUData));
+        int messageType;
+        asio::read(socket, asio::buffer(&messageType, sizeof(messageType)));
 
-        std::cout << "Accelerometer: (" << receivedData.ax << ", " << receivedData.ay << ", " << receivedData.az << ")\n";
-        std::cout << "Gyroscope:     (" << receivedData.gx << ", " << receivedData.gy << ", " << receivedData.gz << ")\n";
-        std::cout << "---------------------------------------------------------------------------------\n";
-
+        switch (messageType) {
+            case 1: {
+                asio::read(socket, asio::buffer(&receivedRegisters, sizeof(receivedRegisters)));
+                break;
+            }
+            case 2: {   
+                asio::read(socket, asio::buffer(&receivedData, sizeof(receivedData)));
+                break;
+            }
+            case 3: {   
+                endData = 1;
+                break;
+            }
+            default: std::cerr << "Unknown message type" << std::endl;
+        }
     } catch (const std::exception& e) {
         std::cerr << "Error receiving data: " << e.what() << std::endl;
-    }*/
-    asio::read(socket, asio::buffer(&receivedData, sizeof(receivedData)));
+    }
 }
 
 IMUData SocketServer::getReceivedData() const {
