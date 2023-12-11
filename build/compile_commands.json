@@ -7,12 +7,6 @@
 },
 {
   "directory": "C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build",
-  "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp -g -o CMakeFiles\\FREE-FALL_detector.dir\\src\\IMU.cpp.obj -c C:\\Users\\RaV\\Desktop\\zadanie_rekrutacyjne_1\\programs\\FREE-FALL_detector\\src\\IMU.cpp",
-  "file": "C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/src/IMU.cpp",
-  "output": "CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj"
-},
-{
-  "directory": "C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/build",
   "command": "C:\\PROGRA~1\\MinGW\\bin\\G__~1.EXE  @CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp -g -o CMakeFiles\\FREE-FALL_detector.dir\\src\\SocketServer.cpp.obj -c C:\\Users\\RaV\\Desktop\\zadanie_rekrutacyjne_1\\programs\\FREE-FALL_detector\\src\\SocketServer.cpp",
   "file": "C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/src/SocketServer.cpp",
   "output": "CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj"

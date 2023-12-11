@@ -11,17 +11,18 @@
 #include "SocketServer.h"
 #include "FFdetector.h"
 
-
 int main() {
     std::cout << "\n************** Welcome to FREE-FALL detector! **************\n";
     
     FFdetector detector;
     detector.setThresholds();
     
-    std::cout << "Open IMU_simulator.exe and upload the simulation values.\nWaiting for connection...\n";
+    std::cout << "Opening IMU_simulator.exe and waiting for connection...\n";
+
+    std::system("start cmd /c ..\\IMU_simulator\\IMU_simulator.exe");
 
     SocketServer server("12345");
-    std::cout << "Port: 1234" << '\n';
+    std::cout << "Connected on the port: 1234" << '\n';
 
     server.startListening();
 
@@ -57,15 +58,21 @@ int main() {
     std::cout << "Number of received values: " << dataCount << " in "
     << std::setprecision(2) << dataCount * (1.0 / imuRegisters.samplingRate) << "s\n";
 
+    detector.printFreeFallResults();
+    
+
     int showFFvalues;
-    std::cout << "Do you want to display detected FF values? Type 1\n";
+    std::cout << "\nDo you want to display detected Free-Fall accelerometer values after Interrupt? Type 1\n";
     std::cin >> showFFvalues;
 
+    getchar();
     if (showFFvalues == 1) {
         detector.printFreeFall();
     }
-    std::cout << "Results"  << std::endl;
-    double ffDuration = detector.getFreeFallDuration();
+
+    std::cout << "\nPress enter to exit.";
+    getchar();
+    std::cout << "Exiting the program. Goodbye!\n";
 
     return 0;
 }

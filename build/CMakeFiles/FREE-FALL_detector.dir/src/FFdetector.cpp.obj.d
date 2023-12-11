@@ -160,4 +160,5 @@ CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj: \
  c:\progra~1\mingw\include\c++\11.2.0\bits\quoted_string.h \
  c:\progra~1\mingw\include\c++\11.2.0\sstream \
  c:\progra~1\mingw\include\c++\11.2.0\bits\sstream.tcc \
- C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\IMU.h
+ C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\IMU.h \
+ c:\progra~1\mingw\include\c++\11.2.0\limits

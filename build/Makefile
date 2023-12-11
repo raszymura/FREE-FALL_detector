@@ -172,30 +172,6 @@ src/FFdetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FREE-FALL_detector.dir\build.make CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.s
 .PHONY : src/FFdetector.cpp.s
 
-src/IMU.obj: src/IMU.cpp.obj
-.PHONY : src/IMU.obj
-
-# target to build an object file
-src/IMU.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FREE-FALL_detector.dir\build.make CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj
-.PHONY : src/IMU.cpp.obj
-
-src/IMU.i: src/IMU.cpp.i
-.PHONY : src/IMU.i
-
-# target to preprocess a source file
-src/IMU.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FREE-FALL_detector.dir\build.make CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.i
-.PHONY : src/IMU.cpp.i
-
-src/IMU.s: src/IMU.cpp.s
-.PHONY : src/IMU.s
-
-# target to generate assembly for a file
-src/IMU.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FREE-FALL_detector.dir\build.make CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.s
-.PHONY : src/IMU.cpp.s
-
 src/SocketServer.obj: src/SocketServer.cpp.obj
 .PHONY : src/SocketServer.obj
 
@@ -258,9 +234,6 @@ help:
 	@echo ... src/FFdetector.obj
 	@echo ... src/FFdetector.i
 	@echo ... src/FFdetector.s
-	@echo ... src/IMU.obj
-	@echo ... src/IMU.i
-	@echo ... src/IMU.s
 	@echo ... src/SocketServer.obj
 	@echo ... src/SocketServer.i
 	@echo ... src/SocketServer.s

@@ -83,26 +83,11 @@ CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.s"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\main.cpp -o CMakeFiles\FREE-FALL_detector.dir\src\main.cpp.s
 
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/flags.make
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj: C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/src/IMU.cpp
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj"
-	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj -MF CMakeFiles\FREE-FALL_detector.dir\src\IMU.cpp.obj.d -o CMakeFiles\FREE-FALL_detector.dir\src\IMU.cpp.obj -c C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\IMU.cpp
-
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.i"
-	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\IMU.cpp > CMakeFiles\FREE-FALL_detector.dir\src\IMU.cpp.i
-
-CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.s"
-	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\IMU.cpp -o CMakeFiles\FREE-FALL_detector.dir\src\IMU.cpp.s
-
 CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/flags.make
 CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp
 CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj: C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/src/SocketServer.cpp
 CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj -MF CMakeFiles\FREE-FALL_detector.dir\src\SocketServer.cpp.obj.d -o CMakeFiles\FREE-FALL_detector.dir\src\SocketServer.cpp.obj -c C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\SocketServer.cpp
 
 CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.i: cmake_force
@@ -117,7 +102,7 @@ CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj: CMakeFiles/FREE-FALL_d
 CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/includes_CXX.rsp
 CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj: C:/Users/RaV/Desktop/zadanie_rekrutacyjne_1/programs/FREE-FALL_detector/src/FFdetector.cpp
 CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj: CMakeFiles/FREE-FALL_detector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj"
 	C:\PROGRA~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj -MF CMakeFiles\FREE-FALL_detector.dir\src\FFdetector.cpp.obj.d -o CMakeFiles\FREE-FALL_detector.dir\src\FFdetector.cpp.obj -c C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\src\FFdetector.cpp
 
 CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.i: cmake_force
@@ -131,7 +116,6 @@ CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.s: cmake_force
 # Object files for target FREE-FALL_detector
 FREE__FALL_detector_OBJECTS = \
 "CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.obj" \
-"CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj" \
 "CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj" \
 "CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj"
 
@@ -139,14 +123,13 @@ FREE__FALL_detector_OBJECTS = \
 FREE__FALL_detector_EXTERNAL_OBJECTS =
 
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/src/main.cpp.obj
-FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/src/IMU.cpp.obj
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/src/SocketServer.cpp.obj
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/src/FFdetector.cpp.obj
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/build.make
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/linkLibs.rsp
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/objects1.rsp
 FREE-FALL_detector.exe: CMakeFiles/FREE-FALL_detector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FREE-FALL_detector.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\RaV\Desktop\zadanie_rekrutacyjne_1\programs\FREE-FALL_detector\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FREE-FALL_detector.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FREE-FALL_detector.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

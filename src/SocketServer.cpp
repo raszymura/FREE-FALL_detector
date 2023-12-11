@@ -38,6 +38,7 @@ void SocketServer::startListening() {
         }
     } catch (const std::exception& e) {
         std::cerr << "Error receiving data: " << e.what() << std::endl;
+        std::exit(EXIT_FAILURE);
     }
 }
 

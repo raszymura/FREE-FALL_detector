@@ -6,7 +6,6 @@ set(ASIO_PATH lib/asio-1.28.0/include)
 # Our Project
 set(SOURCE_FILES
     src/main.cpp
-    src/IMU.cpp
     src/SocketServer.cpp
     src/FFdetector.cpp)
 
